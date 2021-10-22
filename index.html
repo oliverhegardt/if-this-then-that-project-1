@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="./style/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+<title>Christmas Countdown</title>
+</head>
+
+<body>
+  <div class="background-picture-landing"></div>
+  <div class="background-picture-landing"></div>
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❄
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❄
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❄
+    </div>
+  </div>
+  <div class=songbuttons>
+    <audio id="myAudio">
+      <source src="/music/merry-xmas.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <button class="songbutton1" onclick="playAudio()" type="button">Play</button>
+    <button class="songbutton2" onclick="pauseAudio()" type="button">Pause</button>
+    <script>
+      var x = document.getElementById("myAudio");
+      function playAudio() {
+        x.play();
+      }
+      function pauseAudio() {
+        x.pause();
+      }
+    </script>
+  </div>
+
+  <header class="top-header">
+    <h3>Time left to Christmas</h3>
+  </header>
+  <div class="countdown-timer-container">
+    <div id="countdown-timer"></div>
+  </div>
+
+<main>
+  <section class="btn-wish-section">
+    <div class="container-left">
+      <div class="btn-container">
+        <button id="btn-timeLeft" onclick="showTimeUntilChristmasLocalStorage()">How long is it to christmas?</button>
+        <div id="container-timeLeftLS"></div>
+      </div>
+      <div class="btn-container">
+        <button id="btn-timeLeft" onclick="showTimeUntilChristmasSessionStorage()">How long is it to christmas?</button>
+        <div id="container-timeLeftSS"></div>
+      </div>
+    </div>
+
+      <div class="container-right">
+        <div class="wish-list-container">
+          <div class="input-feild">
+            <Input type="text" id="new-item" name="new-item" placeholder="I Wish..."></Input>
+            <button class="buttonAdd" id="add-item" onclick="wishListMain() ">Add</button>
+            <button class="buttonDelete" type="submit"
+              onclick="wishlistClearAll();window.location.reload() ">Delete</button>
+          </div>
+        </div>
+        <div class="wish-list-background">
+          <img src="../pictures/scroll.gif" alt="scroll">
+          <h3>Dear Santa, I wish for</h3>
+          <ul id="wish-list">
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+<script src="./script/script.js"></script>
+
+</html>

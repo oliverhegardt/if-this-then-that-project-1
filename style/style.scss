@@ -1,0 +1,140 @@
+@import "countdowntimer.scss";
+@import "wishlist.scss";
+@import "buttons.scss";
+@import "snowflakes.scss";
+@import "variables.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.background-picture-landing {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/img/background1_small.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.top-header {
+  display: flex;
+  justify-content: center;
+  font-family: "Handlee", cursive;
+  h3 {
+    color: white;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    @media screen and (max-width: 750px) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.btn-wish-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10vw;
+  margin-top: 3vh;
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+  }
+}
+
+.input-feild {
+  margin-bottom: 2vh;
+}
+
+.btn-container {
+  margin: 4vh;
+  @media screen and (max-width: 750px) {
+    margin: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.container-left {
+  @media screen and (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.container-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.songbutton1,
+.songbutton2 {
+  background-color: #942e25;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  -webkit-box-shadow: 1px 1px 2px #000000;
+  box-shadow: 1px 1px 2px #000000;
+  font-family: "Handlee", cursive;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.buttonAdd {
+  background-color: #329425;
+  color: white;
+  padding: 0.2rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  border-radius: 0.5rem;
+  border: none;
+  -webkit-box-shadow: 1px 1px 2px #000000;
+  box-shadow: 1px 1px 2px #000000;
+  font-family: "Handlee", cursive;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+.buttonDelete {
+  background-color: #942e25;
+  color: white;
+  padding: 0.2rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  border-radius: 0.5rem;
+  border: none;
+  -webkit-box-shadow: 1px 1px 2px #000000;
+  box-shadow: 1px 1px 2px #000000;
+  font-family: "Handlee", cursive;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+.buttonDelete:hover,
+.songbutton1:hover,
+.songbutton2:hover {
+  background-color: #bd4135;
+}
+.buttonAdd:hover {
+  background-color: #3ebe48;
+}
+
+.input-feild {
+  display: flex;
+  flex-wrap: nowrap;
+}

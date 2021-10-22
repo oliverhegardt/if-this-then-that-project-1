@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import "variables.scss";
+
+.countdown-timer-container {
+  display: flex;
+  justify-content: center;
+  height: 8vh;
+}
+
+#countdown-timer {
+  font-family: "Handlee", cursive;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  @media screen and (max-width: 980px) {
+    background-color: $color-black-opacity;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.time-box {
+  color: white;
+  @media screen and (max-width: 750px) {
+    font-size: 1.2rem;
+  }
+}
+
+.countdown-design {
+  padding: 50px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: "Handlee", cursive;
+  font-size: 1.2rem;
+}
